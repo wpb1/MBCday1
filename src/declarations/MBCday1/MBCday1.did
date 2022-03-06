@@ -5,8 +5,13 @@ service : {
   divide: (nat, nat) -> (nat) query;
   increment_counter: (nat) -> (nat);
   is_even: (nat) -> (bool);
+  max_in_array: (vec nat) -> (nat);
+  max_in_array2: (vec nat) -> (nat);
   modulo: (nat, nat) -> (nat) query;
+  remove_from_array: (vec nat, nat) -> (vec nat);
   show_counter: () -> (nat) query;
   square: (nat) -> (nat);
+  sum_of_array: (vec nat) -> (nat);
+  test: () -> ();
   test_divide: (nat, nat) -> (bool);
 }

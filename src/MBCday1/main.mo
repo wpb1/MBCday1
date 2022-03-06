@@ -1,3 +1,6 @@
+import Debug "mo:base/Debug";
+import Array "mo:base/Array";
+import Nat "mo:base/Nat";
 actor {
 
   //Challenge 1: Write a function add that takes two natural numbers n and m and 
@@ -62,20 +65,47 @@ actor {
 
   //Challenge 7 : Write a function sum_of_array that takes an array of natural numbers and 
   //returns the sum. This function will returns 0 if the array is empty.
-  //var array : [Nat] = [5, 6, 7, 8];
-  //var n : Nat = 0;
-  //public func sum_of_array ( n : Nat) : async Nat{
-  //  for (value in array.vals()){
-  //    n := n + value
-  //  };
-  //};
-
+    public func sum_of_array ( listofnumbers : [Nat]) : async Nat {
+    var n : Nat = 0;
+    for (value in listofnumbers.vals()){
+      n := n + value;
+    };
+    return(n);
+  };
+  
   //Challenge 8 : Write a function maximum that takes an array of natural numbers and 
   //returns the maximum value in the array. This function will returns 0 if the array is empty.
+  public func max_in_array ( listofnumbers : [Nat]) : async Nat {
+    var n : Nat = 0;
+    for (value in listofnumbers.vals()){
+      if (value > n) {
+        n := value
+      };
+    };
+    return(n);
+  };
+  public func max_in_array2 (listofnumbers : [Nat]) : async Nat {
+    var newarray : [Nat] = Array.sort(listofnumbers, Nat.compare);
+    var arraysize : Nat = listofnumbers.size()-1;
+    return (newarray[arraysize]);
+  };
+
+  let array : [Nat] = [1,2,3,4,5];
+  public func test() : async () {
+      for (value in array.vals()){
+          Debug.print(debug_show(value))
+      };
+  };
+
 
   //Challenge 9 : Write a function remove_from_array that takes 2 parameters : an array of 
   //natural numbers and a natural number n and returns a new array where all occurences of 
   //n have been removed (order should remain unchanged).
+  public func remove_from_array (listofnumbers : [Nat], n : Nat) : async [Nat] {
+    var newarray : [Nat] = Array.filter(listofnumbers,func(m:Nat) : Bool {n != m});
+    return (newarray);
+  };
+ 
 
   //Challenge 10 :
   //  - Watch this video on selection sort. (https://www.youtube.com/watch?v=g-PGLbMth_g)
