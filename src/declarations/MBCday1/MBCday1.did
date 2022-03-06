@@ -1,0 +1,11 @@
+service : {
+  add: (nat, nat) -> (nat);
+  clear_counter: () -> (nat);
+  days_to_second: (nat) -> (nat);
+  divide: (nat, nat) -> (nat) query;
+  increment_counter: (nat) -> (nat);
+  modulo: (nat, nat) -> (nat) query;
+  show_counter: () -> (nat) query;
+  square: (nat) -> (nat);
+  test_divide: (nat, nat) -> (bool);
+}
