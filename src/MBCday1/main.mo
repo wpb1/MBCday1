@@ -97,7 +97,6 @@ actor {
       };
   };
 
-
   //Challenge 9 : Write a function remove_from_array that takes 2 parameters : an array of 
   //natural numbers and a natural number n and returns a new array where all occurences of 
   //n have been removed (order should remain unchanged).
