@@ -101,8 +101,8 @@ actor {
   //Challenge 9 : Write a function remove_from_array that takes 2 parameters : an array of 
   //natural numbers and a natural number n and returns a new array where all occurences of 
   //n have been removed (order should remain unchanged).
-  public func remove_from_array (listofnumbers : [Nat], n : Nat) : async [Nat] {
-    var newarray : [Nat] = Array.filter(listofnumbers,func(m:Nat) : Bool {n != m});
+  public func remove_from_array ( listofnumbers : [Nat], n : Nat) : async [Nat] {
+    var newarray : [Nat] = Array.filter ( listofnumbers, func (m:Nat) : Bool {n != m});
     return (newarray);
   };
  
