@@ -5,6 +5,7 @@ export const idlFactory = ({ IDL }) => {
     'days_to_second' : IDL.Func([IDL.Nat], [IDL.Nat], []),
     'divide' : IDL.Func([IDL.Nat, IDL.Nat], [IDL.Nat], ['query']),
     'increment_counter' : IDL.Func([IDL.Nat], [IDL.Nat], []),
+    'is_even' : IDL.Func([IDL.Nat], [IDL.Bool], []),
     'modulo' : IDL.Func([IDL.Nat, IDL.Nat], [IDL.Nat], ['query']),
     'show_counter' : IDL.Func([], [IDL.Nat], ['query']),
     'square' : IDL.Func([IDL.Nat], [IDL.Nat], []),

@@ -52,9 +52,23 @@ actor {
 
   //Challenge 6 : Write a function is_even that takes a natural number n and 
   //returns a boolean indicating if n is even.
+  public func is_even ( n : Nat) : async Bool {
+    if ( n % 2 == 0 ) {
+      return (true)
+    } else {
+      return (false);
+    }
+  };
 
   //Challenge 7 : Write a function sum_of_array that takes an array of natural numbers and 
   //returns the sum. This function will returns 0 if the array is empty.
+  //var array : [Nat] = [5, 6, 7, 8];
+  //var n : Nat = 0;
+  //public func sum_of_array ( n : Nat) : async Nat{
+  //  for (value in array.vals()){
+  //    n := n + value
+  //  };
+  //};
 
   //Challenge 8 : Write a function maximum that takes an array of natural numbers and 
   //returns the maximum value in the array. This function will returns 0 if the array is empty.
